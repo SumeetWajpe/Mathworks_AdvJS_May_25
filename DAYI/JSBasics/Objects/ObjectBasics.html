@@ -65,15 +65,31 @@
       //   console.log(emp.name);
       //   console.log(emp.age);
 
+      // ES 5 way
+      //   function Employee() {
+      //     this.salary = 200000;
+      //     var _this = this;
+      //     setTimeout(function () {
+      //       console.log(_this.salary);
+      //     }, 2000); // 2 seconds
+      //   }
+
+      // ES 6 way
       function Employee() {
         this.salary = 200000;
-        var _this = this;
-        setTimeout(function () {
-          console.log(_this.salary);
+        setTimeout(() => {
+          console.log(this);
         }, 2000); // 2 seconds
       }
 
       var emp = new Employee();
+
+      //   var EmpArrow = () => {
+      //     console.log(this);
+      //     this.sal = 300000;
+      //   };
+
+      //   EmpArrow();
     </script>
   </head>
   <body></body>
