@@ -26,17 +26,22 @@
       //   };
       // OR
 
-      //   var Add = (x, y) => x + y;
-      //   console.log(Add(40, 20));
+      // var Add = (x, y) => x + y;
+      // console.log(Add(40, 20));
 
       // IIFE - Immediate Invokable Function Expression
       // 1. Its executed only once
+      // 2. It is not accessible outside the function
+      // 3. Initialization logic can be placed inside the IIFE (Loading of a web page)
 
       (function (msg) {
         console.log(msg);
       })("Hello World");
 
       /// Try to rewrite Add as an IIFE
+      (function (x, y) {
+        console.log(x + y);
+      })(20, 30);
     </script>
   </head>
   <body></body>
