@@ -57,20 +57,34 @@
       //   Outer();
 
       // Function that returns a function
-      function Outer() {
-        var outerVar = "Outer function"; // closure variable
-        console.log(outerVar);
-        return function () {
-          console.log(outerVar);
-          console.log("Inner function");
-        };
-      }
+      //   function Outer() {
+      //     var outerVar = "Outer function"; // closure variable
+      //     console.log(outerVar);
+      //     return function () {
+      //       console.log(outerVar);
+      //       console.log("Inner function");
+      //     };
+      //   }
 
-      var Inner = Outer();
-      // 100 lines of code
-      Inner();
+      //   var Inner = Outer();
+      //   // 100 lines of code
+      //   Inner();
       // OR
       //   Outer()();
+
+      // Use case of Closure
+
+      function Counter() {
+        var count = 0;
+        return function () {
+          count++;
+          console.log(count);
+        };
+      }
+      var myCounter = Counter();
+      myCounter(); // 1
+      myCounter(); // 2
+      myCounter(); // 3
     </script>
   </head>
   <body></body>
