@@ -6,54 +6,74 @@
     <title>Document</title>
     <script>
       // Literal Syntax
-      var player = {
-        name: "Carlos Alcaraz",
-        stats: {
-          ranking: 2,
-          latestTitle: "Italian Open",
-        },
-        age: 21,
-        sport: "Tennis",
-        getDetails: function () {
-          console.log(
-            "The player " +
-              this.name +
-              " is " +
-              this.age +
-              " years old and is ranked " +
-              this.stats.ranking +
-              " in the world.",
-          );
-        },
-      };
-      player.country = "Spain"; // Adding a new property
-      player.getDetails();
+      //   var player = {
+      //     name: "Carlos Alcaraz",
+      //     stats: {
+      //       ranking: 2,
+      //       latestTitle: "Italian Open",
+      //     },
+      //     age: 21,
+      //     sport: "Tennis",
+      //     getDetails: function () {
+      //       console.log(
+      //         "The player " +
+      //           this.name +
+      //           " is " +
+      //           this.age +
+      //           " years old and is ranked " +
+      //           this.stats.ranking +
+      //           " in the world.",
+      //       );
+      //     },
+      //   };
+      //   player.country = "Spain"; // Adding a new property
+      //   player.getDetails();
 
-      // Using Object object
-      var player2 = new Object();
-      player2.name = "Novak Djokovic";
-      player2.stats = new Object();
-      player2.stats.ranking = 6;
+      //   // Using Object object
+      //   var player2 = new Object();
+      //   player2.name = "Novak Djokovic";
+      //   player2.stats = new Object();
+      //   player2.stats.ranking = 6;
 
-      // Math,String, Date, Array, RegExp, JSON
-      var s = new String("Hello World");
-      //OR
-      var str = "Hello World";
-      var x = 10;
+      //   // Math,String, Date, Array, RegExp, JSON
+      //   var s = new String("Hello World");
+      //   //OR
+      //   var str = "Hello World";
+      //   var x = 10;
 
-      var obj = {}; // new Object();
+      //   var obj = {}; // new Object();
 
-      // Using Custom Constructor
-      // Like a class in C# / a template
+      //   // Using Custom Constructor
+      //   // Like a class in C# / a template
+      //   function Employee() {
+      //     this.name = "John Doe";
+      //     this.age = 30;
+      //     this.salary = 200000;
+      //     this.getDetails = function () {
+      //       return (
+      //         "The employee " +
+      //         this.name +
+      //         " is " +
+      //         this.age +
+      //         " years old and earns " +
+      //         this.salary
+      //       );
+      //     };
+      //   }
+
+      //   var emp = new Employee();
+      //   console.log(emp.name);
+      //   console.log(emp.age);
+
       function Employee() {
-        this.name = "John Doe";
-        this.age = 30;
         this.salary = 200000;
+        var _this = this;
+        setTimeout(function () {
+          console.log(_this.salary);
+        }, 2000); // 2 seconds
       }
 
       var emp = new Employee();
-      console.log(emp.name);
-      console.log(emp.age);
     </script>
   </head>
   <body></body>
