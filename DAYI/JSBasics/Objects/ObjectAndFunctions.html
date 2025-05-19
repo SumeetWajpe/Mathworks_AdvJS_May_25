@@ -7,7 +7,7 @@
     <script>
       var person = {
         name: "John",
-        greet: function (greeting) {
+        greet: function (greeting, time) {
           console.log(greeting + " " + this.name + " !");
         },
       };
@@ -19,6 +19,24 @@
 
       // Call , Apply , Bind
       person.greet.call(anotherPerson, "Hi"); // invokes greet method of person object with anotherPerson as this
+      person.greet.apply(anotherPerson, ["Hey"]); // invokes greet method of person object with anotherPerson as this
+      var bindedGreet = person.greet.bind(anotherPerson, "Hello"); // binds greet method of person object with anotherPerson as this and invokes it immediately
+      // 100 lines of code
+      bindedGreet();
+
+      // Inheritance with Call
+
+      function Shape() {
+        this.length = 10;
+        this.breadth = 10;
+      }
+
+      function Rect() {
+        Shape.call(this);
+        this.isSquare = false;
+      }
+      //   var shape = new Shape();
+      var rect = new Rect();
     </script>
   </head>
   <body></body>

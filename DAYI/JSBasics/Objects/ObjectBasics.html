@@ -70,26 +70,55 @@
       //     this.salary = 200000;
       //     var _this = this;
       //     setTimeout(function () {
+      //       console.log(this);
       //       console.log(_this.salary);
       //     }, 2000); // 2 seconds
       //   }
 
+      //   var emp = new Employee();
       // ES 6 way
-      function Employee() {
-        this.salary = 200000;
-        setTimeout(() => {
-          console.log(this);
-        }, 2000); // 2 seconds
-      }
+      //   function Employee() {
+      //     this.salary = 200000;
+      //     setTimeout(() => {
+      //       console.log(this.salary);
+      //     }, 2000); // 2 seconds
+      //   }
 
-      var emp = new Employee();
+      //   var emp = new Employee();
 
-      var EmpArrow = () => {
-        console.log(this);
-        this.sal = 300000;
+      //   function GetSalary() {
+      //     console.log(this.salary);
+      //   }
+      //   function Employee() {
+      //     this.salary = 200000;
+      //     setTimeout(GetSalary.bind(this), 2000); // 2 seconds
+      //   }
+
+      //   var emp = new Employee();
+
+      //   var EmpArrow = () => {
+      //     console.log(this);
+      //     this.sal = 300000;
+      //   };
+
+      //   EmpArrow();
+
+      //  var company = { name: "IBM", city: "Pune" };
+
+      //   function Company() {
+      //     this.name = "IBM";
+      //     this.city = "Pune";
+      //   }
+      //   var compInstance = new Company();
+
+      var person = {
+        name: "Carlos Alcaraz",
+        age: 21,
+        sport: "Tennis",
       };
 
-      EmpArrow();
+      var player = Object.create(person);
+      player.ranking = 2;
     </script>
   </head>
   <body></body>
