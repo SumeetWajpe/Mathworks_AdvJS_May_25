@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var person = {
+        name: "John",
+        greet: function (greeting) {
+          console.log(greeting + " " + this.name + " !");
+        },
+      };
+      person.greet("Hello");
+
+      var anotherPerson = {
+        name: "Jane",
+      };
+
+      // Call , Apply , Bind
+      person.greet.call(anotherPerson, "Hi"); // invokes greet method of person object with anotherPerson as this
+    </script>
+  </head>
+  <body></body>
+</html>
