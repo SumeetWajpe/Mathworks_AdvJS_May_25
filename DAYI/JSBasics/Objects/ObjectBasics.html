@@ -26,7 +26,34 @@
           );
         },
       };
+      player.country = "Spain"; // Adding a new property
       player.getDetails();
+
+      // Using Object object
+      var player2 = new Object();
+      player2.name = "Novak Djokovic";
+      player2.stats = new Object();
+      player2.stats.ranking = 6;
+
+      // Math,String, Date, Array, RegExp, JSON
+      var s = new String("Hello World");
+      //OR
+      var str = "Hello World";
+      var x = 10;
+
+      var obj = {}; // new Object();
+
+      // Using Custom Constructor
+      // Like a class in C# / a template
+      function Employee() {
+        this.name = "John Doe";
+        this.age = 30;
+        this.salary = 200000;
+      }
+
+      var emp = new Employee();
+      console.log(emp.name);
+      console.log(emp.age);
     </script>
   </head>
   <body></body>

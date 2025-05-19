@@ -11,6 +11,9 @@
       //   }
       //   Add(10, 20);
 
+      var Add = new Function("x", "y", "return x + y");
+      console.log(Add(10, 20));
+
       // Function Expression
       //   var Add = function (x, y) {
       //     return x + y;
