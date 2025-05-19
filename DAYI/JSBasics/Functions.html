@@ -34,14 +34,38 @@
       // 2. It is not accessible outside the function
       // 3. Initialization logic can be placed inside the IIFE (Loading of a web page)
 
-      (function (msg) {
-        console.log(msg);
-      })("Hello World");
+      //   (function (msg) {
+      //     console.log(msg);
+      //   })("Hello World");
 
-      /// Try to rewrite Add as an IIFE
-      (function (x, y) {
-        console.log(x + y);
-      })(20, 30);
+      //   /// Try to rewrite Add as an IIFE
+      //   (function (x, y) {
+      //     console.log(x + y);
+      //   })(20, 30);
+
+      // Nested Functions
+      //   function Outer() {
+      //     console.log("Outer function");
+      //     function Inner() {
+      //       console.log("Inner function");
+      //     }
+      //     Inner();
+      //   }
+
+      //   Outer();
+
+      // Function that returns a function
+      function Outer() {
+        console.log("Outer function");
+        return function () {
+          console.log("Inner function");
+        };
+      }
+
+      //   var Inner = Outer();
+      //   Inner();
+      // OR
+      Outer()();
     </script>
   </head>
   <body></body>
