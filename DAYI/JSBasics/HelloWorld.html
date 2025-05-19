@@ -9,13 +9,18 @@
       //   var msg = "Hello Javascript !!"; // Global variable
 
       // ES 6 - let
+      let msg = "Hello Javascript !!";
       console.log(msg);
-      let msg = "Hello Javascript !!"; // Block scoped variable
+
+      if (true) {
+        let x = 100; // Block scoped variable
+        console.log(x);
+      }
 
       //   showAlert();
 
       //   function showAlert() {
-      //     var msg = "Hello Javascript !!"; // Function scoped variable
+      //     let msg = "Hello Javascript !!"; // Function scoped variable
 
       //     console.log(msg);
       //   }
