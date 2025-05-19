@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Literal Syntax
+      var player = {
+        name: "Carlos Alcaraz",
+        stats: {
+          ranking: 2,
+          latestTitle: "Italian Open",
+        },
+        age: 21,
+        sport: "Tennis",
+        getDetails: function () {
+          console.log(
+            "The player " +
+              this.name +
+              " is " +
+              this.age +
+              " years old and is ranked " +
+              this.stats.ranking +
+              " in the world.",
+          );
+        },
+      };
+      player.getDetails();
+    </script>
+  </head>
+  <body></body>
+</html>

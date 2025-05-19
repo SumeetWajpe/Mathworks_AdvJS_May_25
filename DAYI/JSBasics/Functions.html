@@ -29,10 +29,14 @@
       // var Add = (x, y) => x + y;
       // console.log(Add(40, 20));
 
+      var Test = () => console.log("Testing 1 2 3");
+      Test();
+
       // IIFE - Immediate Invokable Function Expression
       // 1. Its executed only once
       // 2. It is not accessible outside the function
       // 3. Initialization logic can be placed inside the IIFE (Loading of a web page)
+      //4. Was used to implement Module reveal pattern
 
       //   (function (msg) {
       //     console.log(msg);
@@ -75,7 +79,7 @@
       // Use case of Closure
 
       function Counter() {
-        var count = 0;
+        var count = 0; // closure variable
         return function () {
           count++;
           console.log(count);
