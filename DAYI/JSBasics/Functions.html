@@ -25,8 +25,18 @@
       //     return x + y;
       //   };
       // OR
-      var Add = (x, y) => x + y;
-      console.log(Add(40, 20));
+
+      //   var Add = (x, y) => x + y;
+      //   console.log(Add(40, 20));
+
+      // IIFE - Immediate Invokable Function Expression
+      // 1. Its executed only once
+
+      (function (msg) {
+        console.log(msg);
+      })("Hello World");
+
+      /// Try to rewrite Add as an IIFE
     </script>
   </head>
   <body></body>
