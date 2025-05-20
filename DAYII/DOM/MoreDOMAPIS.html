@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script>
+      var para = document.createElement("p");
+      para.style.color = "red";
+      para.style.fontSize = "20px";
+      para.style.fontWeight = "bold";
+      para.style.textAlign = "center";
+      para.style.backgroundColor = "yellow";
+      para.style.border = "2px solid black";
+      para.style.padding = "10px";
+      para.innerHTML = "<span>Dynamic Para with Span !</span>";
+      var divContainer = document.getElementById("container");
+      divContainer.appendChild(para);
+    </script>
+  </body>
+</html>
