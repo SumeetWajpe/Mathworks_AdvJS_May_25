@@ -15,9 +15,20 @@
       }
 
       JamesBondCar.prototype = new Car("Audi", 300);
-      var jbc = new JamesBondCar();
+      //   JamesBondCar.prototype = new Car("XYZ", 300);
 
+      var jbc = new JamesBondCar();
       console.log(jbc.name);
+
+      function BatManCar() {
+        this.isArmed = true;
+        this.canRoll = true;
+      }
+
+      BatManCar.prototype = new JamesBondCar();
+    //  BatManCar.prototype.constructor = BatManCar;
+
+      var batManCar = new BatManCar();
     </script>
   </head>
   <body></body>
