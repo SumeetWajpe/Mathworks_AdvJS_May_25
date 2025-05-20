@@ -6,21 +6,48 @@
     <title>Document</title>
     <script>
       class Car {
-        constructor() {
-          this.name = "BMW";
-          this.speed = 200;
+        constructor(name = "BMW", speed = 200) {
+          this.name = name;
+          this.speed = speed;
         }
 
-        getDetails() {
-          console.log(
-            "The car " + this.name + " has a speed of " + this.speed + " km/h.",
+        accelerate() {
+          return (
+            // "The car " + this.name + " has a speed of " + this.speed + " km/h."
+            `The car ${this.name} has a speed of ${this.speed} km/h.`
           );
         }
       }
-      var car = new Car();
-      console.log(car.name);
-      console.log(car.speed);
-      car.getDetails();
+      //   var car = new Car();
+      //   console.log(car.name);
+      //   console.log(car.speed);
+      //   car.accelerate();
+
+      class JamesBondCar extends Car {
+        constructor(name, speed, canFly) {
+          super(name, speed);
+          this.canFly = canFly;
+        }
+
+        // static getCarName() {
+        //   return "James Bond Car";
+        // }
+
+        accelerate() {
+          return super.accelerate() + " and can fly: " + this.canFly;
+        }
+      }
+
+      var jbc = new JamesBondCar("Aston Martin", 300, true);
+      console.log(jbc.accelerate());
+
+      //   JamesBondCar.getCarName();
+
+      // String templates
+      var mulitLineStr = `First Line !
+      Second Line
+      Last Line !`;
+      console.log(mulitLineStr);
     </script>
   </head>
   <body></body>
