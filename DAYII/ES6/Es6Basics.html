@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // let , const , arrow functions
+
+      // Spread Operators - Arrays & Objects
+      var cars = ["BMW", "AUDI", "MERC"];
+      var moreCars = ["TATA", "MAHINDRA"];
+      var allCars = [...cars, ...moreCars, "HONDA"];
+      console.log(allCars);
+
+      var person = {
+        name: "Alcaraz",
+        country: "Spain",
+        sport: "Tennis",
+        ranking: 1,
+      };
+      var player = { ...person, ranking: 2 };
+      console.log(player);
+    </script>
+  </head>
+  <body></body>
+</html>

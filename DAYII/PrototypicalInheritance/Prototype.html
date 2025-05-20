@@ -9,13 +9,13 @@
         this.name = name || "BMW";
         this.speed = speed || 200;
       }
+
       function JamesBondCar() {
         this.canFly = true;
         this.canSubmerge = true;
       }
 
       JamesBondCar.prototype = new Car("Audi", 300);
-      //   JamesBondCar.prototype = new Car("XYZ", 300);
 
       var jbc = new JamesBondCar();
       console.log(jbc.name);
@@ -26,7 +26,6 @@
       }
 
       BatManCar.prototype = new JamesBondCar();
-    //  BatManCar.prototype.constructor = BatManCar;
 
       var batManCar = new BatManCar();
     </script>
