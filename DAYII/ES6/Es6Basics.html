@@ -24,11 +24,11 @@
       //   console.log(player);
 
       // Destructuring - Arrays & Objects
-      var cars = ["BMW", "AUDI", "MERC"];
+      //   var cars = ["BMW", "AUDI", "MERC"];
       //   var firstCar = cars[0];
       //   var secondCar = cars[1];
       // OR
-      var [firstCar, secondCar] = cars;
+      //   var [firstCar, secondCar] = cars;
       // with objects
       var person = {
         fname: "Carlos",
@@ -47,6 +47,39 @@
       var {
         stats: { ranking },
       } = person;
+
+      function PrintPerson({ fname, lname, country }) {
+        console.log("Name : " + fname + " " + lname);
+        console.log("Country : " + country);
+      }
+      PrintPerson(person);
+
+      function GetPerson() {
+        return {
+          fname: "Carlos",
+          lname: "Alcaraz",
+          country: "Spain",
+          sport: ["Tennis", "Football"],
+          stats: {
+            ranking: 2,
+            titles: 10,
+          },
+          getName: function () {
+            return this.fname + " " + this.lname;
+          },
+        };
+      }
+
+      var { fname, lname, getName } = GetPerson(); // React
+
+      // Default Parameters
+
+      function PrintBook(author = "Unknown", title = "Unknown") {
+        console.log(author, title);
+      }
+      PrintBook("Dr. APJ Abdul Kalam", "Wings of Fire");
+      PrintBook();
+      PrintBook(undefined, "Some Book");
     </script>
   </head>
   <body></body>
