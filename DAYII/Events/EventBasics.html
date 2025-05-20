@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function ClickHandler() {
+        console.log("Button Clicked !");
+      }
+
+      function LoadHandler() {
+        var dynamicButton = document.createElement("input");
+        dynamicButton.type = "button";
+        dynamicButton.value = "Click Me (Dynamic)";
+        dynamicButton.id = "btnClick";
+        dynamicButton.onclick = ClickHandler;
+        document.getElementById("container").appendChild(dynamicButton);
+      }
+    </script>
+  </head>
+  <body onload="LoadHandler()">
+    <!-- <input
+      type="button"
+      value="Click Me"
+      id="btnClick"
+      onclick="ClickHandler()"
+    /> -->
+
+    <div id="container"></div>
+  </body>
+</html>

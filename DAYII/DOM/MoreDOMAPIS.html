@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .item {
+        color: blue;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        background-color: yellow;
+        border: 2px solid black;
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
     <div id="container"></div>
@@ -13,7 +24,10 @@
     <p>Hello Para3 !</p>
 
     <script>
-      //   var para = document.createElement("p");
+      var para = document.createElement("p");
+      //   para.className = "item";
+      para.setAttribute("class", "item");
+
       //   para.style.color = "red";
       //   para.style.fontSize = "20px";
       //   para.style.fontWeight = "bold";
@@ -21,14 +35,14 @@
       //   para.style.backgroundColor = "yellow";
       //   para.style.border = "2px solid black";
       //   para.style.padding = "10px";
-      //   para.innerHTML = "<span>Dynamic Para with Span !</span>";
-      //   var divContainer = document.getElementById("container");
-      //   divContainer.appendChild(para);
+      para.innerHTML = "<span>Dynamic Para with Span !</span>";
+      var divContainer = document.getElementById("container");
+      divContainer.appendChild(para);
 
-      var paras = document.getElementsByTagName("p");
-      for (var i = 0; i < paras.length; i++) {
-        console.log(paras[i].innerText);
-      }
+      //   var paras = document.getElementsByTagName("p");
+      //   for (var i = 0; i < paras.length; i++) {
+      //     console.log(paras[i].innerText);
+      //   }
     </script>
   </body>
 </html>
