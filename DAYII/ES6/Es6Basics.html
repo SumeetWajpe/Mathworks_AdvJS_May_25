@@ -8,19 +8,39 @@
       // let , const , arrow functions
 
       // Spread Operators - Arrays & Objects
-      var cars = ["BMW", "AUDI", "MERC"];
-      var moreCars = ["TATA", "MAHINDRA"];
-      var allCars = [...cars, ...moreCars, "HONDA"];
-      console.log(allCars);
+      //   var cars = ["BMW", "AUDI", "MERC"];
+      //   var moreCars = ["TATA", "MAHINDRA"];
+      //   var allCars = [...cars, ...moreCars, "HONDA"];
+      //   console.log(allCars);
 
+      // with objects
+      // var person = {
+      //   name: "Alcaraz",
+      //   country: "Spain",
+      //   sport: "Tennis",
+      //   ranking: 1,
+      // };
+      //   var player = { ...person, ranking: 2 };
+      //   console.log(player);
+
+      // Destructuring - Arrays & Objects
+      var cars = ["BMW", "AUDI", "MERC"];
+      //   var firstCar = cars[0];
+      //   var secondCar = cars[1];
+      // OR
+      var [firstCar, secondCar] = cars;
+      // with objects
       var person = {
-        name: "Alcaraz",
+        fname: "Carlos",
+        lname: "Alcaraz",
         country: "Spain",
-        sport: "Tennis",
+        sport: ["Tennis", "Football"],
         ranking: 1,
       };
-      var player = { ...person, ranking: 2 };
-      console.log(player);
+      //   var fname = person.fname;
+      //   var lname = person.lname;
+      // OR
+      var { lname, fname: firstname, title = "Mr.", sport } = person;
     </script>
   </head>
   <body></body>
