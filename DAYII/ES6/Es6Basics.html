@@ -74,12 +74,27 @@
 
       // Default Parameters
 
-      function PrintBook(author = "Unknown", title = "Unknown") {
-        console.log(author, title);
+      //   function PrintBook(author = "Unknown", title = "Unknown", noOfPages = 0) {
+      //     console.log(author, title, noOfPages);
+      //   }
+      //   PrintBook("Dr. APJ Abdul Kalam", "Wings of Fire");
+      //   PrintBook();
+      //   PrintBook(undefined, "Some Book");
+
+      // Rest Parameters
+      // Last parameter
+      // Cant have multiple rest parameters
+      // Cant have initializer for rest parameter
+      function PrintBook(author, ...titles) {
+        console.log(author, titles);
       }
-      PrintBook("Dr. APJ Abdul Kalam", "Wings of Fire");
-      PrintBook();
-      PrintBook(undefined, "Some Book");
+      PrintBook("Dr. APJ Abdul Kalam", "Wings of Fire", "Ignited Minds");
+      PrintBook(
+        "Rahul Dravid",
+        "The Test of My Life",
+        "The Nice Guy",
+        "The Wall",
+      );
     </script>
   </head>
   <body></body>
