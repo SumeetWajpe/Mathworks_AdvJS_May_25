@@ -8,18 +8,27 @@
   <body>
     <div id="container"></div>
 
+    <p>Hello Para1 !</p>
+    <p>Hello Para2 !</p>
+    <p>Hello Para3 !</p>
+
     <script>
-      var para = document.createElement("p");
-      para.style.color = "red";
-      para.style.fontSize = "20px";
-      para.style.fontWeight = "bold";
-      para.style.textAlign = "center";
-      para.style.backgroundColor = "yellow";
-      para.style.border = "2px solid black";
-      para.style.padding = "10px";
-      para.innerHTML = "<span>Dynamic Para with Span !</span>";
-      var divContainer = document.getElementById("container");
-      divContainer.appendChild(para);
+      //   var para = document.createElement("p");
+      //   para.style.color = "red";
+      //   para.style.fontSize = "20px";
+      //   para.style.fontWeight = "bold";
+      //   para.style.textAlign = "center";
+      //   para.style.backgroundColor = "yellow";
+      //   para.style.border = "2px solid black";
+      //   para.style.padding = "10px";
+      //   para.innerHTML = "<span>Dynamic Para with Span !</span>";
+      //   var divContainer = document.getElementById("container");
+      //   divContainer.appendChild(para);
+
+      var paras = document.getElementsByTagName("p");
+      for (var i = 0; i < paras.length; i++) {
+        console.log(paras[i].innerText);
+      }
     </script>
   </body>
 </html>
