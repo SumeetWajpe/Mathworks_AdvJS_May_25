@@ -8,11 +8,11 @@
       div {
         color: blue;
       }
-      .even {
+      div.even {
         /* color: green; */
         border: 2px solid red;
       }
-      #first {
+      div#first {
         background-color: yellow;
         padding: 10px;
         margin: 10px;
@@ -26,5 +26,16 @@
     <div>Division !</div>
     <div class="even">Division !</div>
     <div>Division !</div>
+    <p class="even">Para with even class !</p>
+    <script>
+      //   var divs = document.getElementsByClassName("even");
+      //   console.log(divs.length);
+
+      // var firstDiv = document.querySelector("div[style]"); // made available in HTML5
+      // console.log(firstDiv.innerText);
+
+      var allEvens = document.querySelectorAll(".even"); // 4 [3divs & 1 para]
+      console.log(allEvens.length);
+    </script>
   </body>
 </html>
