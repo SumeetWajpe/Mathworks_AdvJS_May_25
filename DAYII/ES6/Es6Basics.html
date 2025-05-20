@@ -35,12 +35,18 @@
         lname: "Alcaraz",
         country: "Spain",
         sport: ["Tennis", "Football"],
-        ranking: 1,
+        stats: {
+          ranking: 2,
+          titles: 10,
+        },
       };
       //   var fname = person.fname;
       //   var lname = person.lname;
       // OR
-      var { lname, fname: firstname, title = "Mr.", sport } = person;
+      //   var { lname, fname: firstname, title = "Mr.", sport } = person;
+      var {
+        stats: { ranking },
+      } = person;
     </script>
   </head>
   <body></body>
