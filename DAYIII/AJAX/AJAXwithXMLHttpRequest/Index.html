@@ -7,7 +7,10 @@
     <script src="GetData.js"></script>
     <script>
       function FetchDataFromServer() {
-        GetData();
+        GetData(function (response,err) {
+          console.log(response);
+        });
+        // DOM Manipulation
       }
     </script>
   </head>
