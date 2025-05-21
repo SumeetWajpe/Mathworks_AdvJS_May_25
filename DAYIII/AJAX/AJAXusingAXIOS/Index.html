@@ -5,25 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.js"></script>
-    <script src="GetData.js"></script>
     <script>
-      window.addEventListener("DOMContentLoaded", FetchDataFromServer);
-      function FetchDataFromServer() {
-        var thePromise = GetData();
-        thePromise
-          .then(function (response) {
-            console.log(response.data);
-          })
-          .catch(function (err) {
-            console.log("Error Occured");
-            console.log(err);
-          })
-          .finally(function () {
-            console.log("Finally Block Executed");
-          });
-        console.log("Program Ended ");
+      class Posts {
+        posts = [];
+        getPosts() {
+          axios
+            .get("https://jsonplaceholder.typicode.com/posts")
+            .then(response => {
+              const postList = document.getElementById("postList");
+              console.log(response.data);
+              this.posts = response.data;
+              this.posts.forEach(function (post) {
+                const li = document.createElement("li");
+                li.textContent = post.title;
+                postList.appendChild(li);
+              });
+            })
+            .catch(error => {
+              console.error("Error fetching posts:", error);
+            });
+        }
       }
+
+      var posts = new Posts();
+      posts.getPosts();
+      // window.addEventListener("DOMContentLoaded", FetchDataFromServer);
+      // function FetchDataFromServer() {
+      //   var thePromise = GetData();
+      //   thePromise
+      //     .then(function (response) {
+      //       console.log(response.data);
+      //     })
+      //     .catch(function (err) {
+      //       console.log("Error Occured");
+      //       console.log(err);
+      //     })
+      //     .finally(function () {
+      //       console.log("Finally Block Executed");
+      //     });
+      //   console.log("Program Ended ");
+      // }
     </script>
   </head>
-  <body></body>
+  <body>
+    <div id="container">
+      <header>
+        <h1>All Posts</h1>
+      </header>
+      <main>
+        <ul id="postList"></ul>
+      </main>
+    </div>
+  </body>
 </html>
