@@ -10,15 +10,17 @@
       window.addEventListener("DOMContentLoaded", FetchDataFromServer);
       function FetchDataFromServer() {
         var thePromise = GetData();
-        thePromise.then(
-          function (response) {
+        thePromise
+          .then(function (response) {
             console.log(response.data);
-          },
-          function (err) {
+          })
+          .catch(function (err) {
             console.log("Error Occured");
             console.log(err);
-          },
-        );
+          })
+          .finally(function () {
+            console.log("Finally Block Executed");
+          });
         console.log("Program Ended ");
       }
     </script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="GetData.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", FetchDataFromServer);
+      async function FetchDataFromServer() {
+        try {
+          var response = await GetData();
+          console.log(response);
+        } catch (error) {
+          console.log("Error Occured");
+          console.log(error);
+        }
+      }
+
+      console.log("Program Ended ");
+    </script>
+  </head>
+  <body></body>
+</html>
