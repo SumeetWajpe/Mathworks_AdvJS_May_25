@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var products = [
+        {
+          id: 1,
+          name: "Laptop",
+          price: 100,
+          description: "This is Laptop",
+          category: "Category 1",
+          getDetails: function () {
+            return this.name + " - " + this.price;
+          },
+        },
+      ];
+
+      var jsonProduct = JSON.stringify(products); // converts js object to JSON string
+      console.log(jsonProduct);
+
+      var jsObject = JSON.parse(jsonProduct); // converts JSON string to js object
+    </script>
+  </head>
+  <body></body>
+</html>
