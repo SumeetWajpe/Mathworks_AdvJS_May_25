@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="GetData.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", FetchDataFromServer);
+      function FetchDataFromServer() {
+        var thePromise = GetData();
+        thePromise.then(
+          function (response) {
+            console.log(response);
+          },
+          function (err) {
+            console.log("Error Occured");
+            console.log(err);
+          },
+        );
+        console.log("Program Ended ");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>All Posts</h1>
+      </header>
+      <main>
+        <ul id="postList"></ul>
+      </main>
+    </div>
+  </body>
+</html>
