@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.js"></script>
+    <script src="GetData.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", FetchDataFromServer);
+      function FetchDataFromServer() {
+        var thePromise = GetData();
+        thePromise.then(
+          function (response) {
+            console.log(response.data);
+          },
+          function (err) {
+            console.log("Error Occured");
+            console.log(err);
+          },
+        );
+        console.log("Program Ended ");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
