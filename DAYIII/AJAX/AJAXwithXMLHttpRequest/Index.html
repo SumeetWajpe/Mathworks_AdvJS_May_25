@@ -6,20 +6,34 @@
     <title>Document</title>
     <script src="GetData.js"></script>
     <script>
+      window.addEventListener("DOMContentLoaded", FetchDataFromServer);
       function FetchDataFromServer() {
-        GetData(function (response,err) {
-          console.log(response);
+        GetData(function (response, err) {
+          if (response) {
+            // console.log(response);
+            // DOM Manipulation
+            var postList = document.querySelector("#postList");
+
+            for (let index = 0; index < response.length; index++) {
+              var newLi = document.createElement("li");
+              newLi.innerHTML = response[index].title;
+              postList.appendChild(newLi);
+            }
+          } else if (err) {
+            console.error(err);
+          }
         });
-        // DOM Manipulation
       }
     </script>
   </head>
   <body>
-    <input
-      type="button"
-      id="btn"
-      value="Get Data"
-      onclick="FetchDataFromServer()"
-    />
+    <div id="container">
+      <header>
+        <h1>All Posts</h1>
+      </header>
+      <main>
+        <ul id="postList"></ul>
+      </main>
+    </div>
   </body>
 </html>
