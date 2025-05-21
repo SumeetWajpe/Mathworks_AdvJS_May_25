@@ -15,7 +15,7 @@
               const postList = document.getElementById("postList");
               console.log(response.data);
               this.posts = response.data;
-              this.posts.forEach(function (post) {
+              this.posts.forEach(post => {
                 const li = document.createElement("li");
                 li.textContent = post.title;
                 postList.appendChild(li);
