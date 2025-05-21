@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      console.log("Started");
+      var aPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Promise Resolved after 2 seconds");
+        }, 2000);
+      });
+
+      aPromise
+        .then(result => console.log(result))
+        .then(function () {
+          console.log("Nested Promise Resolved");
+          throw new Error("Error in Nested Promise");
+        })
+        .then(
+          () => console.log("Nested 2 Promise Resolved"),
+          err => console.log("ERRRRROOOORRR :  " + err),
+        )
+        .then(() => {
+          console.log("Nested 3 Promise Resolved");
+        })
+        .catch(err => console.log(err));
+
+      console.log("Ended");
+    </script>
+  </head>
+  <body></body>
+</html>
