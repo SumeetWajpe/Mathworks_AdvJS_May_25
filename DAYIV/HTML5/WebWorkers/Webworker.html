@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var worker = null;
+      function HandleHeavyLifting() {
+        worker = new Worker("worker.js");
+        worker.postMessage("Message from main thread");
+        worker.onmessage = function (event) {
+          console.log("Message from worker: " + event.data);
+        };
+      }
+
+      function ClickHandler() {
+        console.log("Click Handler Called");
+      }
+      function Terminator() {
+        worker.terminate();
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="HandleHeavyLifting()">Start Heavy Lifting !</button>
+    <button onclick="ClickHandler()">Click Me !</button>
+    <button onclick="Terminator()">Terminator !</button>
+  </body>
+</html>
