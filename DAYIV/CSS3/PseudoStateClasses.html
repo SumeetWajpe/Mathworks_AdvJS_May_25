@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button:disabled {
+        background-color: lightgray;
+        color: white;
+        border: 2px solid gray;
+        cursor: not-allowed;
+      }
+      .container {
+        height: 200px;
+        width: 200px;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid red;
+      }
+      .container:hover {
+        background-color: lightblue;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <button disabled>Click Me !</button>
+    <div class="container">Container !</div>
+  </body>
+</html>
