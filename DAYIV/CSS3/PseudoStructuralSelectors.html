@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* p:first-child {
+        color: red;
+        border: 2px solid black;
+        padding: 5px;
+      } */
+      /* p:last-child {
+        color: red;
+        border: 2px solid black;
+        padding: 5px;
+      } */
+      /* p:nth-child(2n + 1) {
+        color: red;
+        border: 2px solid black;
+        padding: 5px;
+      } */
+      p:first-of-type {
+        color: red;
+        border: 2px solid black;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Para - 1</p>
+      <p>Para - 2</p>
+      <p>Para - 3</p>
+      <p>Para - 4</p>
+      <p>Para - 5</p>
+    </div>
+
+    <section>
+      <article>
+        <div>
+          <div>Div as first child !</div>
+          <p>Hello !</p>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
