@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var x = 100;
+
+      function Test() {
+        var company = { name: "IBM", location: "India" };
+        /// 100 lines of code
+      }
+
+      Test();
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Web Accessibility</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#importance">Importance of Accessibility</a></li>
+        <li>
+          <a href="#guidelines">Web Content Accessibility Guidelines (WCAG)</a>
+        </li>
+        <li><a href="#best-practices">Best Practices</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark"
+        alt="HTML5 Logo"
+        width="300"
+        height="200"
+      />
+
+      <div style="background-color: aqua; color: white">
+        Some text which is bad at contrast ratio !
+      </div>
+
+      <div
+        style="
+          width: 60px;
+          background-color: lightblue;
+          box-shadow: 3px 3px 3px gray;
+          border: 1px solid white;
+          border-radius: 3px;
+          cursor: pointer;
+        "
+        role="button"
+        tabindex="0"
+      >
+        Submit
+      </div>
+    </main>
+  </body>
+</html>

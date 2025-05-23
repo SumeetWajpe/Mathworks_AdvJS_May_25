@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var largerArray = [];
+      var isRunning = false;
+      function GrowHandler() {
+        isRunning = true;
+        if (isRunning) {
+          setTimeout(GrowInSize, 1000);
+        }
+        GrowInSize();
+      }
+
+      function GrowInSize() {
+        largerArray.push(new Array(1000000).fill("*"));
+      }
+
+      function StopHandler() {
+        isRunning = false;
+        largerArray = []; // can be done if usage of array is over
+        console.log("Memory Cleared !");
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="GrowHandler()">Grow In Size !</button>
+    <button onclick="StopHandler()">Stop !</button>
+  </body>
+</html>
